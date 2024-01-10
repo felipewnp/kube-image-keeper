@@ -1,5 +1,5 @@
 apiVersion: v2
-name: kube-image-keeper
+name: kube-image-keeper-apps
 description: kuik is a container image caching system for Kubernetes.
 type: application
 annotations:
@@ -9,7 +9,7 @@ annotations:
   artifacthub.io/changes: ''
   artifacthub.io/links: |
     - name: Chart Sources
-      url: https://github.com/enix/kube-image-keeper/tree/main/helm/kube-image-keeper
+      url: https://github.com/enix/kube-image-keeper/tree/main/helm/kube-image-keeper-apps
     - name: Helm Repository
       url: https://charts.enix.io
 version: 0.0.0
@@ -27,8 +27,3 @@ maintainers:
   - name: David Donchez
     email: david.donchez@enix.fr
     url: https://github.com/donch
-dependencies:
-  - name: minio
-    version: "12.1.4"
-    repository: "https://charts.bitnami.com/bitnami"
-    condition: minio.enabled
